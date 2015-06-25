@@ -1,0 +1,2 @@
+实现busline and customTypeAdapter
+所有对象都实现了implements Serializable，gson可以直接序列化,反序列化。
