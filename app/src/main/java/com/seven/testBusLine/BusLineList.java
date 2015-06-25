@@ -1,5 +1,6 @@
 package com.seven.testBusLine;
 
+import com.google.gson.annotations.SerializedName;
 import com.seven.testBusLine.BusLine;
 
 import java.io.Serializable;
@@ -15,7 +16,8 @@ public class BusLineList implements Serializable {
 
     private String dist;
 
-    private List<BusLine> busLinesList;
+    @SerializedName("busLinesList")
+    private List<BusLine> busLines;
 
     public void setUpdate(String update){
         this.update = update;
@@ -36,10 +38,10 @@ public class BusLineList implements Serializable {
         return this.dist;
     }
     public void setBusLinesList(List<BusLine> busLinesList){
-        this.busLinesList = busLinesList;
+        this.busLines = busLinesList;
     }
     public List<BusLine> getBusLinesList(){
-        return this.busLinesList;
+        return this.busLines;
     }
 
 }
